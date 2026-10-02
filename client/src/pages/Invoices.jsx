@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const INVOICES_URL = "http://localhost:5000/api/invoices";
-const TICKETS_URL = "http://localhost:5000/api/repair-tickets";
-const CUSTOMERS_URL = "http://localhost:5000/api/customers";
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+const INVOICES_URL = `${API_BASE_URL}/api/invoices`;
+const TICKETS_URL = `${API_BASE_URL}/api/repair-tickets`;
+const CUSTOMERS_URL = `${API_BASE_URL}/api/customers`;
 
 const STATUS_OPTIONS = ["unpaid", "paid", "cancelled"];
 

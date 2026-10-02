@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const PAYMENTS_URL = "http://localhost:5000/api/payments";
-const INVOICES_URL = "http://localhost:5000/api/invoices";
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+const PAYMENTS_URL = `${API_BASE_URL}/api/payments`;
+const INVOICES_URL = `${API_BASE_URL}/api/invoices`;
 
 const METHOD_OPTIONS = ["cash", "card", "upi", "bank_transfer"];
 const STATUS_OPTIONS = ["pending", "completed", "failed"];

@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const DEVICES_URL = "http://localhost:5000/api/devices";
-const CUSTOMERS_URL = "http://localhost:5000/api/customers";
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+const DEVICES_URL = `${API_BASE_URL}/api/devices`;
+const CUSTOMERS_URL = `${API_BASE_URL}/api/customers`;
 
 const emptyForm = {
   customer: "",

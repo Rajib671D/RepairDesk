@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const TICKETS_URL = "http://localhost:5000/api/repair-tickets";
-const DEVICES_URL = "http://localhost:5000/api/devices";
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+const TICKETS_URL = `${API_BASE_URL}/api/repair-tickets`;
+const DEVICES_URL = `${API_BASE_URL}/api/devices`;
 
 const PRIORITY_OPTIONS = ["low", "medium", "high", "urgent"];
 const STATUS_OPTIONS = [

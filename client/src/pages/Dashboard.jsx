@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+
 const Dashboard = () => {
   const [stats, setStats] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -14,7 +16,7 @@ const Dashboard = () => {
       try {
         const token = localStorage.getItem("token");
 
-        const response = await axios.get("http://localhost:5000/api/dashboard", {
+        const response = await axios.get(`${API_BASE_URL}/api/dashboard`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
