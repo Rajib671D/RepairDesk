@@ -1,6 +1,6 @@
 const RepairTicket = require("../models/RepairTicket");
 const Device = require("../models/Device");
-const User = require("../models/User");
+const User = require("../models/user");
 
 const createRepairTicket = async (req, res) => {
   try {
